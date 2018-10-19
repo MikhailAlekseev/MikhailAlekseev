@@ -32,7 +32,7 @@ header {
   padding-bottom: 44.806%;
 }
 
-nav, .nav-list, .home-bike, .home-shop-gallery, .home-shop-gallery-left-top, .home-shop-gallery-middle, .home-shop-gallery-right-bottom, .home-shop-gallery-left-bottom, .home-shop-gallery-right-top, .footer-inner {
+nav, .nav-list, .home-bike, .home-bike-1-right, .home-bike-2-left, .home-bike-3-middle, .home-shop-gallery, .home-shop-gallery-left-top, .home-shop-gallery-middle, .home-shop-gallery-right-bottom, .home-shop-gallery-left-bottom, .home-shop-gallery-right-top, .footer-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +93,8 @@ nav {
   top: 35px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 .nav-left-filler {
@@ -151,11 +152,21 @@ main {
   width: 33.3333%;
 }
 
+.home-bike-1-right, .home-bike-2-left, .home-bike-3-middle {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .home-bike-text {
   padding-left: 12%;
   padding-right: 12%;
   padding-bottom: 15.8%;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .home-bike-text h2 {
@@ -178,7 +189,8 @@ main {
   top: 122.5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 @media (max-width:1190px) {
@@ -195,13 +207,8 @@ main {
   bottom: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-@media (max-width:1499px) {
-  .home-bike-text+img {
-    display: none;
-  }
+          -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 .home-bike-1-right-text {
@@ -252,6 +259,37 @@ main {
   max-height: 600px;
 }
 
+@media (min-width:1500px) and (max-width:1599px){
+	
+	.home-bike-1-right {
+		padding-top:1.53%;
+	}
+	
+	.home-bike-2-left {
+		padding-top:.7%;
+	}
+	
+	.home-bike-3-middle {
+		padding-top:.8%;
+	}
+	
+	.home-bike-text {
+		padding-top:0;
+	}
+}
+
+@media (max-width:1499px) {
+  .home-bike-text+img {
+    display: none;
+  }
+  
+  .home-bike-text {
+	padding-bottom:0;
+  }
+  
+}
+
+
 .tweet-slider {
   padding: 123px 0 60px;
 }
@@ -272,23 +310,27 @@ main {
   position: relative;
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
+  -o-transition: transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
 }
 
 .tweet-slide-1-active {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+          -ms-transform: translateX(0);
+      transform: translateX(0);
 }
 
 .tweet-slide-2-active {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
 }
 
 .tweet-slide-3-active {
   -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
+          -ms-transform: translateX(-200%);
+      transform: translateX(-200%);
 }
 
 .tweet-slide {
@@ -386,7 +428,8 @@ main {
   left: 50%;
   top: 46%;
   -webkit-transform: translateX(-50%) translateY(-15px);
-          transform: translateX(-50%) translateY(-15px);
+          -ms-transform: translateX(-50%) translateY(-15px);
+      transform: translateX(-50%) translateY(-15px);
   opacity: 0;
 }
 
@@ -412,7 +455,8 @@ main {
   left: 50%;
   top: 53%;
   -webkit-transform: translateX(-50%) translateY(15px);
-          transform: translateX(-50%) translateY(15px);
+          -ms-transform: translateX(-50%) translateY(15px);
+      transform: translateX(-50%) translateY(15px);
 }
 
 .discover-the-shop, .discover-the-shop-link {
@@ -471,6 +515,10 @@ p.subscription-form-text {
   color: rgba(146, 146, 146, 0.502);
 }
 
+.subscription-form-email:-ms-input-placeholder {
+  color: rgba(146, 146, 146, 0.502);
+}
+
 .subscription-form-email::placeholder {
   color: rgba(146, 146, 146, 0.502);
 }
@@ -526,7 +574,8 @@ footer {
   left: 51%;
   bottom: 3px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 .social-button {
