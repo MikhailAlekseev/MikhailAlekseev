@@ -1,5 +1,5 @@
 function slider() {
-  var slides = document.getElementById("tweet-slider-slides-wrapper");
+  var slidesWrapper = document.getElementById("tweet-slider-slides-wrapper");
   var dots = document.querySelectorAll(".slider-dot");
   function activateSlider() {
   var dotId = this.id;
@@ -8,22 +8,22 @@ function slider() {
       dot.classList.remove("slider-dot-active");
     });
     this.classList.add("slider-dot-active");
-    slides.classList = "";
+    slidesWrapper.classList = "";
     if (dotId === "slider-dot-1") {
-        slides.classList.add("tweet-slide-1-active");
+        slidesWrapper.classList.add("tweet-slide-1-active");
     } else if (dotId === "slider-dot-2") {
-        slides.classList.add("tweet-slide-2-active");
+        slidesWrapper.classList.add("tweet-slide-2-active");
     } else {
-        slides.classList.add("tweet-slide-3-active");
+        slidesWrapper.classList.add("tweet-slide-3-active");
     }
     }
   }
   function clearTimer() {
     clearInterval(timer);
   }
-  var event = new Event('build');
+  var triggerSlider = new Event('autoTriggerSlider');
   [].forEach.call(dots, function(dot) {
-    dot.addEventListener('build', activateSlider);
+    dot.addEventListener('autoTriggerSlider', activateSlider);
     dot.addEventListener('click', clearTimer);
     dot.addEventListener('click', activateSlider);
 })
@@ -33,7 +33,7 @@ var timer = setInterval(function() {
   if (i === 4){
     i = 1;
   }
-  document.getElementById("slider-dot-" + i++).dispatchEvent(event);;
+  document.getElementById("slider-dot-" + i++).dispatchEvent(triggerSlider);
 
 }, 7000);
 timer;
