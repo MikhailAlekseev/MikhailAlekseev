@@ -161,7 +161,6 @@ main {
 .home-bike-text {
  padding-left: 12%;
  padding-right: 12%;
- padding-bottom: 15.8%;
  position: relative;
  -webkit-box-flex: 1;
      -ms-flex-positive: 1;
@@ -254,37 +253,6 @@ main {
  max-height: 600px;
 }
 
-@media (min-width:1500px) and (max-width:1599px){
-
- .home-bike-1-right {
-   padding-top:1.53%;
- }
-
- .home-bike-2-left {
-   padding-top:.7%;
- }
-
- .home-bike-3-middle {
-   padding-top:.8%;
- }
-
- .home-bike-text {
-   padding-top:0;
- }
-}
-
-@media (max-width:1499px) {
- .home-bike-text+img {
-   display: none;
- }
-
- .home-bike-text {
- padding-bottom:0;
- }
-
-}
-
-
 .tweet-slider {
  padding: 123px 0 60px;
 }
@@ -293,12 +261,6 @@ main {
  position: relative;
  min-height: 179px;
  overflow: hidden;
-}
-
-@media (max-width: 1299px) {
- .tweet-slider-slides {
-   min-height: 200px;
- }
 }
 
 #tweet-slider-slides-wrapper {
@@ -329,7 +291,7 @@ main {
  width: 100%;
  -webkit-box-sizing: border-box;
          box-sizing: border-box;
- padding: 0 260px;
+ padding: 0 17.5%;
 }
 
 .tweet-slide-2 {
@@ -600,4 +562,39 @@ footer {
  background: url('../image/yebo-logo.png') center no-repeat;
  vertical-align: middle;
  padding: 0 5px;
+}
+
+
+@media (min-width:1500px) and (max-width:1599px){
+
+ .home-bike-1-right {
+   padding-top:1.53%;
+ }
+
+ .home-bike-2-left {
+   padding-top:.7%;
+ }
+
+ .home-bike-3-middle {
+   padding-top:.8%;
+ }
+
+ .home-bike-text {
+   padding-top:0;
+ }
+}
+
+@media (max-width:1499px) {
+ .home-bike-text+img {
+   display: none;
+ }
+
+ .home-bike-text {
+ padding-bottom:0;
+ }
+
+ .tweet-slide {
+  padding: 0 12%;
+ }
+
 }
