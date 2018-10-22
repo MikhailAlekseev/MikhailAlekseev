@@ -585,7 +585,7 @@ footer {
 }
 
 @media (max-width:1499px) {
-  .home-bike-text+img {
+  .home-bike-text+img, .home-bike-text::after {
     display: none;
   }
 
