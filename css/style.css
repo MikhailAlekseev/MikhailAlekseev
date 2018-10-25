@@ -606,4 +606,8 @@ footer {
     padding: 0 12%;
   }
 
+  .tweet p {
+    font-size: 14px;
+}
+
 }
